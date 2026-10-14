@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yardy Construction Services | Denver Metro & Northern Colorado</title>
+  <meta name="description" content="Family-owned construction and outdoor services in the Denver Metro and Greater Fort Collins area. Landscaping, fencing, concrete, painting, and more.">
+  <style>
+    :root {
+      --green: #4a6b4a;
+      --green-dark: #3a553a;
+      --terracotta: #c97b4a;
+      --cream: #f8f5f0;
+      --soft-blue: #e8f0f5;
+      --text: #2c2c2c;
+      --light-text: #5a5a5a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--cream);
+    }
+
+    a {
+      color: var(--terracotta);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .logo span {
+      color: var(--terracotta);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--terracotta);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #f0f5f0 0%, #faf6f1 100%);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      color: var(--green-dark);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .hero .sub {
+      font-size: 1.35rem;
+      color: var(--terracotta);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 2rem;
+      color: var(--light-text);
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--terracotta);
+      color: white !important;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: background 0.2s;
+      text-decoration: none !important;
+    }
+
+    .btn:hover {
+      background: #b36a3d;
+    }
+
+    /* Sections */
+    section {
+      padding: 4.5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--green-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 3rem;
+      color: var(--light-text);
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .service-img {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .service-card h3 {
+      padding: 1.1rem 1.25rem 0.4rem;
+      color: var(--green);
+      font-size: 1.2rem;
+    }
+
+    .service-card p {
+      padding: 0 1.25rem 1.4rem;
+      color: var(--light-text);
+      font-size: 0.95rem;
+    }
+
+    /* About */
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 1.2rem;
+      color: var(--light-text);
+    }
+
+    .about-text strong {
+      color: var(--green-dark);
+    }
+
+    .about-highlight {
+      background: var(--soft-blue);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--terracotta);
+      margin-top: 1.5rem;
+    }
+
+    /* Contact */
+    .contact {
+      background: linear-gradient(135deg, #f0f5f0, #faf6f1);
+      text-align: center;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .contact-item {
+      background: white;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      min-width: 220px;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--green);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--green-dark);
+      color: #dce5dc;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #f0c9a8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        display: none; /* simple for mobile; can expand later */
+      }
+      .hero {
+        padding: 3.5rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Yardy <span>Construction</span> Services</div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Got a Project in Mind?</h1>
+    <div class="sub">Yardy Construction Services</div>
+    <p>Professional residential construction and outdoor services for the Denver Metro & Greater Fort Collins area. Family-owned. Fully insured. Built on clear communication and quality craftsmanship.</p>
+    <a href="tel:3037170764" class="btn">Call or Text 303-717-0764</a>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2>What We Do</h2>
+      <p class="section-intro">From outdoor transformations to interior finishes, we bring skilled local crews and professional project management to every job.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&h=400&fit=crop');"></div>
+          <h3>Landscaping & Brush Clearing</h3>
+          <p>Transform overgrown spaces into beautiful, usable outdoor areas that enhance your property and the neighborhood.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop');"></div>
+          <h3>Fencing</h3>
+          <p>Durable, attractive fencing solutions that provide privacy, security, and curb appeal for years to come.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop');"></div>
+          <h3>Concrete & Flatwork</h3>
+          <p>Clean, long-lasting patios, driveways, sidewalks, and foundations installed with precision and care.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop');"></div>
+          <h3>Painting</h3>
+          <p>Interior and exterior painting that refreshes your home and protects it with quality materials and attention to detail.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop');"></div>
+          <h3>Drywall & Trim</h3>
+          <p>Smooth walls, crisp finishes, and professional trim work that make rooms feel complete and polished.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop');"></div>
+          <h3>Handyman & More</h3>
+          <p>Reliable help for the projects that keep your home running smoothly — from repairs to small upgrades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Our Story</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Yardy Construction Services is a <strong>family-owned and operated</strong> business proudly serving central and northern Colorado since 2022. What began as a focused brush-clearing and landscaping company has grown into a trusted general contractor partner for homeowners across the Denver Metro and Greater Fort Collins areas.</p>
+
+          <p>We’re passionate about our craft. Every project — whether it’s a new fence, a fresh coat of paint, a concrete patio, or a full outdoor transformation — is an opportunity to make a home more functional, more beautiful, and more enjoyable for the people who live there. We believe well-done work doesn’t just improve individual properties; it strengthens the look and feel of entire neighborhoods.</p>
+
+          <p>Clear, consistent communication is at the heart of how we work. From the first conversation through project completion, we keep you informed, respond promptly, and make sure there are no surprises. You always know what’s happening, when it’s happening, and who is responsible.</p>
+
+          <div class="about-highlight">
+            <p><strong>Tyler and Samantha Davis</strong> built this company on the simple idea that homeowners deserve reliable local crews, professional management, and honest answers. We’re small enough to care deeply about every job and experienced enough to deliver quality results you can count on.</p>
+          </div>
+        </div>
+        <div>
+          <!-- Decorative side content -->
+          <div style="background: var(--soft-blue); border-radius: 16px; padding: 2.5rem; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="color: var(--green-dark); margin-bottom: 1rem;">Why Homeowners Choose Us</h3>
+            <ul style="list-style: none; color: var(--light-text);">
+              <li style="margin-bottom: 0.8rem;">✓ Family-owned since 2022</li>
+              <li style="margin-bottom: 0.8rem;">✓ Fully insured for your peace of mind</li>
+              <li style="margin-bottom: 0.8rem;">✓ Quality local crews we trust</li>
+              <li style="margin-bottom: 0.8rem;">✓ Transparent pricing & clear timelines</li>
+              <li style="margin-bottom: 0.8rem;">✓ We stand behind our work</li>
+              <li>✓ Serving Denver Metro & Northern Colorado</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Let’s Talk About Your Project</h2>
+      <p class="section-intro">Ready to get started or just have a question? We’re easy to reach and happy to help.</p>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <strong>Phone / Text</strong>
+          <a href="tel:3037170764">303-717-0764</a>
+        </div>
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:yardyllc@gmail.com">yardyllc@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>Service Area</strong>
+          Denver Metro & Greater Fort Collins
+        </div>
+      </div>
+
+      <p style="margin-top: 1.5rem; color: var(--light-text);">
+        Prefer to text? Send us a photo of your project and a quick description — we’ll get back to you promptly.
+      </p>
+      <br>
+      <a href="tel:3037170764" class="btn">Call or Text Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Yardy Construction Services • Family-owned by Tyler & Samantha Davis</p>
+    <p style="margin-top: 0.5rem;">Serving the Denver Metro Area and Greater Fort Collins, Colorado</p>
+    <p style="margin-top: 0.8rem;">
+      <a href="tel:3037170764">303-717-0764</a> ·
+      <a href="mailto:yardyllc@gmail.com">yardyllc@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
